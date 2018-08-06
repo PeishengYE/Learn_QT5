@@ -8,7 +8,8 @@ Window {
     title: qsTr("Client Management")
 
     Text {
-        text: "Welcome to the Client Management system!"
+//        text: "Welcome to the Client Management system!"
+        text: masterController.ui_welcomeMessage
         font {
                     bold: true
                     pointSize: 34
