@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
 
     QQmlApplicationEngine engine;
     engine.rootContext()->setContextProperty("masterController", &masterController);
-    engine.load(QUrl(QStringLiteral("qrc:/MasterView.qml")));
+    engine.load(QUrl(QStringLiteral("qrc:/views/MasterView.qml")));
 
     if (engine.rootObjects().isEmpty())
         return -1;

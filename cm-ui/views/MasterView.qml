@@ -7,18 +7,18 @@ Window {
     width: 640
     height: 480
     title: qsTr("Client Management")
-//    StackView {
-//        id: contentFrame
-//        initialItem: "qrc:/views/SplashView.qml"
-//    }
-
-    Text {
-//        text: "Welcome to the Client Management system!"
-        text: masterController.ui_welcomeMessage
-        font {
-                    bold: true
-                    pointSize: 34
-                }
-
+    StackView {
+        id: contentFrame
+        initialItem: "qrc:/views/SplashView.qml"
     }
+
+//    Text {
+////        text: "Welcome to the Client Management system!"
+//        text: masterController.ui_welcomeMessage
+//        font {
+//                    bold: true
+//                    pointSize: 34
+//                }
+
+//    }
 }
