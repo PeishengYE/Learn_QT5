@@ -7,18 +7,44 @@ Window {
     width: 640
     height: 480
     title: qsTr("Client Management")
-    StackView {
-        id: contentFrame
-        initialItem: "qrc:/views/SplashView.qml"
+    Connections {
+        target: masterController.ui_navigationController
+        onGoCreateClientView: contentFrame.replace("qrc:/views/CreateClientView.qml")
+        onGoDashboardView: contentFrame.replace("qrc:/views/DashboardView.qml")
+        onGoEditClientView: contentFrame
+                     .replace("qrc:/views/EditClientView.qml",{ selectedClient: client }
+        )
+        onGoFindClientView: contentFrame.replace("qrc:/views/FindClientView.qml")
     }
 
-//    Text {
-////        text: "Welcome to the Client Management system!"
-//        text: masterController.ui_welcomeMessage
-//        font {
-//                    bold: true
-//                    pointSize: 34
-//                }
+    StackView {
+        id: contentFrame
+        anchors {
+            top: parent.top
+            bottom: parent.bottom
+            right: parent.right
+            left: navigationBar.right    }
+        initialItem: Qt.resolvedUrl("qrc:/views/SplashView.qml")
+    }
 
-//    }
+   Rectangle {    id: navigationBar
+       Column {
+           Button {
+               text: "Dashboard"
+               onClicked: masterController.ui_navigationController.goDashboardView()
+           }
+
+           Button {
+               text: "New Client"
+               onClicked: masterController.ui_navigationController.goCreateClientView()
+           }
+
+           Button {
+               text: "Find Client"
+               onClicked: masterController.ui_navigationController.goFindClientView()
+           }
+       }
+   }
+    Component.onCompleted: contentFrame.replace("qrc:/views/DashboardView.qml");
+
 }
