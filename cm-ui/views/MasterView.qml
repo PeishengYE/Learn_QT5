@@ -28,6 +28,13 @@ Window {
     }
 
    Rectangle {    id: navigationBar
+       anchors {
+           top: parent.top
+           bottom: parent.bottom
+           left: parent.left
+       }
+       width: 100
+       color: "#000000"
        Column {
            Button {
                text: "Dashboard"

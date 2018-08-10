@@ -19,7 +19,8 @@ class CMLIBSHARED_EXPORT MasterController : public QObject{
             const QString& welcomeMessage() const;
 
         private:
-            class Implementation;    QScopedPointer<Implementation> implementation;
+            class Implementation;
+            QScopedPointer<Implementation> implementation;
         };
     }
    }
