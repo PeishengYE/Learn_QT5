@@ -4,11 +4,14 @@ import QtQuick 2.0
 //         width: 400
 //         height: 200
 //         color: "#f4c842"}
-
-Rectangle {
-    anchors.fill: parent
-    color: "#f4c842"
-    Text {
-        anchors.centerIn: parent
-        text: "Splash View"    }
+Item{
+    Rectangle {
+        anchors.fill: parent
+        color: "#f4c842"
+        Text {
+            anchors.centerIn: parent
+            text: "Splash View"    }
+    }
 }
+
+

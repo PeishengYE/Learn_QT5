@@ -17,17 +17,10 @@ Window {
         onGoFindClientView: contentFrame.replace("qrc:/views/FindClientView.qml")
     }
 
-    StackView {
-        id: contentFrame
-        anchors {
-            top: parent.top
-            bottom: parent.bottom
-            right: parent.right
-            left: navigationBar.right    }
-        initialItem: Qt.resolvedUrl("qrc:/views/SplashView.qml")
-    }
 
-   Rectangle {    id: navigationBar
+
+   Rectangle {
+       id: navigationBar
        anchors {
            top: parent.top
            bottom: parent.bottom
@@ -51,6 +44,19 @@ Window {
                onClicked: masterController.ui_navigationController.goFindClientView()
            }
        }
+   }
+
+   StackView {
+       id: contentFrame
+       anchors {
+           top: parent.top
+           bottom: parent.bottom
+           right: parent.right
+           left: navigationBar.right
+
+       }
+        clip: true
+       initialItem: Qt.resolvedUrl("qrc:/views/SplashView.qml")
    }
     Component.onCompleted: contentFrame.replace("qrc:/views/DashboardView.qml");
 
