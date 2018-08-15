@@ -1,2 +1,2 @@
 module assets 
-singleton Style_yep 1.0 Style.qml
+singleton Style 1.0 Style.qml

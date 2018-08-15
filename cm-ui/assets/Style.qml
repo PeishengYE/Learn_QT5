@@ -3,7 +3,7 @@ import QtQuick 2.9
 
 
 Item {
-    property alias fontAwesome:    fontAwesomeLoader.namereadonly
+//    property alias fontAwesome:    fontAwesomeLoader
 
     property color colourBackground: "#efefef"
     FontLoader {

@@ -29,21 +29,81 @@ Window {
        width: 100
        color: "#000000"
        Column {
-           Button {
-               text: "Dashboard"
-               onClicked: masterController.ui_navigationController.goDashboardView()
+
+           Row{
+               Text {
+                   font {
+                       family: Style.fontAwesome
+                       pixelSize: 42
+                   }
+                   color: "#ffffff"
+                   text: "\uf0c9"
+               }
+               Text {
+                   color: "#ffffff"
+                   text: "New Client"
+               }
+           }
+           Row{
+               Text {
+                   font {
+                       family: Style.fontAwesome
+                       pixelSize: 42
+                   }
+                   color: "#ffffff"
+                   text: "\uf015"
+               }
+               Text {
+                   color: "#ffffff"
+                   text: "New Client"
+               }
+           }
+           Row{
+               Text {
+                   font {
+                       family: Style.fontAwesome
+                       pixelSize: 42
+                   }
+                   color: "#ffffff"
+                   text: "\uf234"
+               }
+               Text {
+                   color: "#ffffff"
+                   text: "New Client"
+               }
            }
 
-           Button {
-               text: "New Client"
-               onClicked: masterController.ui_navigationController.goCreateClientView()
-           }
-
-           Button {
-               text: "Find Client"
-               onClicked: masterController.ui_navigationController.goFindClientView()
+           Row{
+                Text {
+                   font {
+                       family: Style.fontAwesome
+                       pixelSize: 42
+                   }
+                   color: "#ffffff"
+                   text: "\uf002"
+               }
+                Text {
+                    color: "#ffffff"
+                    text: "New Client"
+                }
            }
        }
+//       Column {
+//           Button {
+//               text: "Dashboard"
+//               onClicked: masterController.ui_navigationController.goDashboardView()
+//           }
+
+//           Button {
+//               text: "New Client"
+//               onClicked: masterController.ui_navigationController.goCreateClientView()
+//           }
+
+//           Button {
+//               text: "Find Client"
+//               onClicked: masterController.ui_navigationController.goFindClientView()
+//           }
+//       }
    }
 
    StackView {
