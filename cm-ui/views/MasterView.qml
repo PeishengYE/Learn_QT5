@@ -1,6 +1,7 @@
 import QtQuick 2.9
 import QtQuick.Window 2.2
 import QtQuick.Controls 2.2
+import assets 1.0
 
 Window {
     visible: true
@@ -41,7 +42,7 @@ Window {
                }
                Text {
                    color: "#ffffff"
-                   text: "New Client"
+                   text: "Toggle menu"
                }
            }
            Row{
@@ -55,7 +56,7 @@ Window {
                }
                Text {
                    color: "#ffffff"
-                   text: "New Client"
+                   text: "Dashboard"
                }
            }
            Row{
@@ -65,7 +66,7 @@ Window {
                        pixelSize: 42
                    }
                    color: "#ffffff"
-                   text: "\uf234"
+                   text: "\uf235"
                }
                Text {
                    color: "#ffffff"
@@ -84,7 +85,7 @@ Window {
                }
                 Text {
                     color: "#ffffff"
-                    text: "New Client"
+                    text: "Find Client"
                 }
            }
        }
