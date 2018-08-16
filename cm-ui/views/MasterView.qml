@@ -2,6 +2,7 @@ import QtQuick 2.9
 import QtQuick.Window 2.2
 import QtQuick.Controls 2.2
 import assets 1.0
+import components 1.0
 
 Window {
     visible: true
@@ -29,83 +30,27 @@ Window {
        }
        width: 100
        color: "#000000"
-       Column {
 
-           Row{
-               Text {
-                   font {
-                       family: Style.fontAwesome
-                       pixelSize: 42
-                   }
-                   color: "#ffffff"
-                   text: "\uf0c9"
+
+           Column {
+               NavigationButton {
+                                iconCharacter: "\uf0c9"
+                                description: ""
                }
-               Text {
-                   color: "#ffffff"
-                   text: "Toggle menu"
+               NavigationButton {
+                                 iconCharacter: "\uf015"
+                                 description: "Dashboard"
                }
-           }
-           Row{
-               Text {
-                   font {
-                       family: Style.fontAwesome
-                       pixelSize: 42
-                   }
-                   color: "#ffffff"
-                   text: "\uf015"
+               NavigationButton {
+                                iconCharacter: "\uf234"
+                                description: "New Client"
                }
-               Text {
-                   color: "#ffffff"
-                   text: "Dashboard"
-               }
-           }
-           Row{
-               Text {
-                   font {
-                       family: Style.fontAwesome
-                       pixelSize: 42
-                   }
-                   color: "#ffffff"
-                   text: "\uf234"
-               }
-               Text {
-                   color: "#ffffff"
-                   text: "New Client"
+               NavigationButton {
+                                iconCharacter: "\uf002"
+                                description: "Find Client"
                }
            }
 
-           Row{
-                Text {
-                   font {
-                       family: Style.fontAwesome
-                       pixelSize: 42
-                   }
-                   color: "#ffffff"
-                   text: "\uf002"
-               }
-                Text {
-                    color: "#ffffff"
-                    text: "Find Client"
-                }
-           }
-       }
-//       Column {
-//           Button {
-//               text: "Dashboard"
-//               onClicked: masterController.ui_navigationController.goDashboardView()
-//           }
-
-//           Button {
-//               text: "New Client"
-//               onClicked: masterController.ui_navigationController.goCreateClientView()
-//           }
-
-//           Button {
-//               text: "Find Client"
-//               onClicked: masterController.ui_navigationController.goFindClientView()
-//           }
-//       }
-   }
 
    StackView {
        id: contentFrame
@@ -121,4 +66,5 @@ Window {
    }
     Component.onCompleted: contentFrame.replace("qrc:/views/DashboardView.qml");
 
+}
 }
