@@ -66,7 +66,7 @@ Window {
                        pixelSize: 42
                    }
                    color: "#ffffff"
-                   text: "\uf235"
+                   text: "\uf234"
                }
                Text {
                    color: "#ffffff"
