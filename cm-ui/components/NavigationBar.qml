@@ -8,12 +8,12 @@ Item {
             bottom: parent.bottom
             left: parent.left
         }
-
+        width: isCollapsed ? Style.widthNavigationBarCollapsed : Style.heightNavigationBarExpanded
         Rectangle{
 
-//            width: isCollapsed ? Style.widthNavigationBarCollapsed : Style.heightNavigationBarExpanded
+
             color: Style.colourNavigationBarBackground
-            width:100
+           anchors.fill: parent
 
             Column {
                 NavigationButton {

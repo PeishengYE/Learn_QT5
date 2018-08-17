@@ -24,6 +24,7 @@ Window {
 
    NavigationBar {
        id: navigationBar
+       isCollapsed: true
    }
 
    StackView {
