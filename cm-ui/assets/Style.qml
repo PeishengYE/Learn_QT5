@@ -11,6 +11,7 @@ Item {
         source: "qrc:/assets/fontawesome.ttf"
     }
     readonly property color colourNavigationBarBackground: "#000000"
+    readonly property color colourNavigationBarHoverBackground: "#111100"
     readonly property color colourNavigationBarFont: "#ffffff"
     readonly property int pixelSizeNavigationBarIcon: 42
     readonly property real widthNavigationButtonIcon: 80

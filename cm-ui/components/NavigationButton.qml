@@ -5,6 +5,17 @@ Item {
     property alias description: textDescription.text
     width: Style.widthNavigationButton
     height: Style.heightNavigationButton
+    signal navigationButtonClicked()
+    property color hoverColour: Style.colourNavigationBarHoverBackground
+
+    states: [
+        State {        name: "hover"
+            PropertyChanges {
+                target: background
+                color: hoverColour
+            }
+        }
+    ]
 
     Rectangle {
         id: background
@@ -32,5 +43,13 @@ Item {
                 text: "SET ME!!"
             }
         }
+
+    MouseArea {
+        anchors.fill: parent
+        cursorShape: Qt.PointingHandCursor
+        hoverEnabled: true
+        onEntered: background.state = "hover"
+        onExited: background.state = ""
+        onClicked: navigationButtonClicked()}
     }
 }
