@@ -3,7 +3,7 @@ import assets 1.0
 Item {
     property alias iconCharacter: textIcon.text
     property alias description: textDescription.text
-    width: Style.widthNavigationButton
+    width: parent.width
     height: Style.heightNavigationButton
     signal navigationButtonClicked()
     property color hoverColour: Style.colourNavigationBarHoverBackground

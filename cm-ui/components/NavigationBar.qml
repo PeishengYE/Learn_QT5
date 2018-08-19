@@ -16,6 +16,7 @@ Item {
            anchors.fill: parent
 
             Column {
+                width: parent.width
                 NavigationButton {
                     iconCharacter: "\uf0c9"
                     description: ""
