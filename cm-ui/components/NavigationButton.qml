@@ -8,22 +8,25 @@ Item {
     signal navigationButtonClicked()
     property color hoverColour: Style.colourNavigationBarHoverBackground
 
-    states: [
-        State {        name: "hover"
-            PropertyChanges {
-                target: background
-                color: hoverColour
-            }
-        }
-    ]
+
 
     Rectangle {
         id: background
         anchors.fill: parent
         color: Style.colourNavigationBarBackground
+        states: [
+            State {        name: "hover"
+                PropertyChanges {
+                    target: background
+                    color: hoverColour
+                }
+            }
+        ]
         Row {
             Text {
                 id: textIcon
+                verticalAlignment: Text.AlignVCenter
+                horizontalAlignment: Text.AlignHCenter
                 width: Style.widthNavigationButtonIcon
                 height: Style.heightNavigationButtonIcon
                 font {
@@ -37,6 +40,9 @@ Item {
 
             Text {
                 id: textDescription
+                verticalAlignment: Text.AlignVCenter
+                horizontalAlignment: Text.AlignHCenter
+                font.pixelSize: Style.pixelSizeNavigationBarText
                 width: Style.widthNavigationButtonDescription
                 height: Style.heightNavigationButtonDescription
                 color: Style.colourNavigationBarFont
