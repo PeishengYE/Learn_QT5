@@ -4,10 +4,12 @@ namespace cm {
         namespace framework {
 
           class Command::Implementation{
-            public:    Implementation(const QString& _iconCharacter,const QString& _description,
-                                                std::function<bool()> _canExecute):iconCharacter(_iconCharacter),
+            public:    Implementation(const QString& _iconCharacter, const QString& _description,
+                                                std::function<bool()> _canExecute)
+                                                      :iconCharacter(_iconCharacter),
                                                 description(_description),
                                                 canExecute(_canExecute){ }
+
                        QString iconCharacter;
                        QString description;
                        std::function<bool()> canExecute;
