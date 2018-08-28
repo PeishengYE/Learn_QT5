@@ -10,14 +10,18 @@ INCLUDEPATH += source
 SOURCES += source/models/client.cpp \
     source/controllers/master-controller.cpp \
     source/controllers/command-controller.cpp \
-    source/framework/command.cpp
+    source/framework/command.cpp \
+    source/data/data-decorator.cpp \
+    source/data/string-decorator.cpp
 
 HEADERS += source/cm-lib_global.h \
     source/models/client.h \
     source/controllers/master-controller.h \
     source/controllers/command-controller.h \
     source/controllers/navigation-controller.h \
-    source/framework/command.h
+    source/framework/command.h \
+    source/data/data-decorator.h \
+    source/data/string-decorator.h
 
 message(cm-lib project dir: $${PWD})
 DESTDIR = $$PWD/../binaries/$$DESTINATION_PATH
