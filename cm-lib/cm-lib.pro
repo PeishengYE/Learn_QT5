@@ -12,7 +12,10 @@ SOURCES += source/models/client.cpp \
     source/controllers/command-controller.cpp \
     source/framework/command.cpp \
     source/data/data-decorator.cpp \
-    source/data/string-decorator.cpp
+    source/data/string-decorator.cpp \
+    source/data/int-decorator.cpp \
+    source/data/datetime-decorator.cpp \
+    source/data/enumerator-decorator.cpp
 
 HEADERS += source/cm-lib_global.h \
     source/models/client.h \
@@ -21,7 +24,10 @@ HEADERS += source/cm-lib_global.h \
     source/controllers/navigation-controller.h \
     source/framework/command.h \
     source/data/data-decorator.h \
-    source/data/string-decorator.h
+    source/data/string-decorator.h \
+    source/data/int-decorator.h \
+    source/data/datetime-decorator.h \
+    source/data/enumerator-decorator.h
 
 message(cm-lib project dir: $${PWD})
 DESTDIR = $$PWD/../binaries/$$DESTINATION_PATH
